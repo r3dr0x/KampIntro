@@ -1,10 +1,15 @@
-﻿using System;
+﻿using InterfacesAbstractDemo.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace InterfacesAbstractDemo.Abstract
 {
-    class CustomerManager
+    public abstract class BaseCustomerManager : ICustomerService
     {
+        public virtual void Save(Customer customer)
+        {
+            Console.WriteLine("Saved To Database : " + customer.FirstName);
+        }
     }
 }
